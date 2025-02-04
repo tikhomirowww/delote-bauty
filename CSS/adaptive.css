@@ -1,0 +1,68 @@
+@media screen and (max-width: 1629px) {
+  .hero-title {
+    margin-block: 200px;
+  }
+
+  .works-imgs img {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  #services {
+    gap: 60px;
+  }
+  #services .card {
+    width: 30%;
+  }
+
+  .card-img,
+  .card-img img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .card-img {
+    height: 205px;
+  }
+
+  #services .card {
+    width: 23%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .card-img {
+    height: 167px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-list {
+    justify-content: space-around;
+    gap: unset;
+    width: auto;
+  }
+
+  .card-img {
+    height: 135px;
+  }
+
+  .card-title {
+    font-size: 22px;
+  }
+
+  #partners img {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer-top {
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: baseline;
+    justify-content: center;
+  }
+}
