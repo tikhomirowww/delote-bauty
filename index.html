@@ -13,6 +13,11 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@8.3.2/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -58,41 +63,85 @@
         </p>
       </section>
       <section id="services">
-        <div class="card">
-          <div class="card-img">
-            <img src="./images/barber.png" alt="barber" />
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-img">
+                  <img src="./images/barber.png" alt="barber" />
+                </div>
+                <p class="card-title">Парикмахерские услуги</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-img">
+                  <img src="./images/manikur.png" alt="manikur" />
+                </div>
+                <p class="card-title">Маникюр</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-img">
+                  <img src="./images/pedikur.png" alt="pedikur" />
+                </div>
+                <p class="card-title">Педикюр</p>
+              </div>
+            </div>
+            ...
           </div>
-          <p class="card-title">Парикмахерские услуги</p>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
         </div>
-        <div class="card">
-          <div class="card-img">
-            <img src="./images/manikur.png" alt="manikur" />
+
+        <div class="cards-big">
+          <div class="card">
+            <div class="card-img">
+              <img src="./images/barber.png" alt="barber" />
+            </div>
+            <p class="card-title">Парикмахерские услуги</p>
           </div>
-          <p class="card-title">Маникюр</p>
-        </div>
-        <div class="card">
-          <div class="card-img">
-            <img src="./images/pedikur.png" alt="pedikur" />
+          <div class="card">
+            <div class="card-img">
+              <img src="./images/manikur.png" alt="manikur" />
+            </div>
+            <p class="card-title">Маникюр</p>
           </div>
-          <p class="card-title">Педикюр</p>
-        </div>
-        <div class="card">
-          <div class="card-img">
-            <img src="./images/cosmtics.png" alt="cosmtics" />
+          <div class="card">
+            <div class="card-img">
+              <img src="./images/pedikur.png" alt="pedikur" />
+            </div>
+            <p class="card-title">Педикюр</p>
           </div>
-          <p class="card-title">Косметология</p>
-        </div>
-        <div class="card">
-          <div class="card-img">
-            <img src="./images/massage.png" alt="massage" />
+          <div class="card">
+            <div class="card-img">
+              <img src="./images/cosmtics.png" alt="cosmtics" />
+            </div>
+            <p class="card-title">Косметология</p>
           </div>
-          <p class="card-title">Эстетист по телу</p>
-        </div>
-        <div class="card">
-          <div class="card-img">
-            <img src="./images/vizazh.png" alt="vizazh" />
+          <div class="card">
+            <div class="card-img">
+              <img src="./images/massage.png" alt="massage" />
+            </div>
+            <p class="card-title">Эстетист по телу</p>
           </div>
-          <p class="card-title">Визаж</p>
+          <div class="card">
+            <div class="card-img">
+              <img src="./images/vizazh.png" alt="vizazh" />
+            </div>
+            <p class="card-title">Визаж</p>
+          </div>
         </div>
       </section>
       <section id="partners">
@@ -150,6 +199,30 @@
       </footer>
     </div>
   </body>
+  <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+      // Optional parameters
+      direction: "vertical",
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+    });
+  </script>
   <script>
     const menuBtn = document.querySelector("#menu");
     const aside = document.querySelector("aside");

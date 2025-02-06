@@ -66,3 +66,59 @@
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 770px) {
+  .card-img {
+    height: 100px;
+  }
+  .nav-list li:first-child,
+  .nav-list li:last-child,
+  .nav-list li:nth-child(4) {
+    margin: 0;
+  }
+
+  .hero-title {
+    margin-block: 225px;
+    font-size: 50px;
+  }
+
+  #info img {
+    margin-top: 45px;
+    margin-bottom: 20px;
+    width: 50px;
+  }
+
+  #partners {
+    margin-block: 60px;
+  }
+
+  #works h2 {
+    font-size: 35px;
+  }
+
+  .works-list {
+    gap: 35px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .cards-big {
+    display: none;
+  }
+
+  .swiper {
+    display: block !important;
+  }
+
+  #services .card {
+    width: 46%;
+  }
+
+  .card-img {
+    height: 179px;
+  }
+}
