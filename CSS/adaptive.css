@@ -1,6 +1,6 @@
 @media screen and (max-width: 1629px) {
   .hero-title {
-    margin-block: 200px;
+    margin-block: 120px;
   }
 
   .works-imgs img {
@@ -78,7 +78,7 @@
   }
 
   .hero-title {
-    margin-block: 225px;
+    margin-block: 160px;
     font-size: 50px;
   }
 
@@ -106,19 +106,91 @@
 }
 
 @media screen and (max-width: 650px) {
-  .cards-big {
+  .cards-big,
+  .works-imgs {
     display: none;
   }
 
   .swiper {
-    display: block !important;
+    display: block;
   }
 
-  #services .card {
+  #services .card,
+  #works img {
     width: 46%;
   }
 
   .card-img {
     height: 179px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .swiper {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav .nav-list li:nth-child(2),
+  nav .nav-list li:nth-child(3),
+  nav .nav-list li:nth-child(5),
+  nav .nav-list li:nth-child(6) {
+    display: none;
+  }
+
+  aside .nav-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-title {
+    margin-block: 180px;
+    font-size: 38px;
+  }
+
+  .works-list {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-top li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #info > p {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .swiper {
+    width: 250px;
+  }
+
+  .card-img {
+    height: 87px;
+  }
+
+  #works img {
+    width: 55%;
+  }
+
+  footer {
+    margin: 50px auto 50px;
+  }
+
+  #info p {
+    margin-bottom: 0;
   }
 }

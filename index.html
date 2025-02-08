@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./CSS/style.css" />
-    <link rel="stylesheet" href="./CSS/vars.css" />
-    <link rel="stylesheet" href="./CSS/adaptive.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,12 +14,20 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script src="https://unpkg.com/swiper@8.3.2/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/vars.css" />
+    <link rel="stylesheet" href="./CSS/adaptive.css" />
   </head>
   <body>
     <div class="container">
       <aside>
         <div class="aside-close">X</div>
+        <ul class="nav-list">
+          <li>Главная</li>
+          <li><a href="#services">Услуги</a></li>
+          <li>Партнёры</li>
+          <li>Работы</li>
+        </ul>
       </aside>
       <section id="hero">
         <nav>
@@ -92,17 +97,12 @@
                 <p class="card-title">Педикюр</p>
               </div>
             </div>
-            ...
           </div>
           <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
-
           <!-- If we need navigation buttons -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
-
-          <!-- If we need scrollbar -->
-          <div class="swiper-scrollbar"></div>
         </div>
 
         <div class="cards-big">
@@ -158,6 +158,27 @@
           <li>Маникюр</li>
           <li>Педикюр</li>
         </ul>
+        <!-- Slider main container -->
+        <div class="swiper swiper-works">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="./images/work1.png" alt="work1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/work2.png" alt="work2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/work3.png" alt="work3" />
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
         <div class="works-imgs">
           <img src="./images/work1.png" alt="work1" />
           <img src="./images/work2.png" alt="work2" />
@@ -199,12 +220,29 @@
       </footer>
     </div>
   </body>
+  <script>
+    const menuBtn = document.querySelector("#menu");
+    const aside = document.querySelector("aside");
+    const closeBtn = document.querySelector(".aside-close");
+    closeBtn.addEventListener("click", () => {
+      aside.style.width = 0;
+    });
+    console.log(menuBtn);
+    menuBtn.addEventListener("click", () => {
+      console.log("qwerty");
+      aside.style.width = "30%";
+    });
+  </script>
   <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper(".swiper", {
       // Optional parameters
-      direction: "vertical",
+      direction: "horizontal",
       loop: true,
+      effect: "coverflow",
+      // autoplay: {
+      //   delay: 3000,
+      // },
 
       // If we need pagination
       pagination: {
@@ -216,22 +254,29 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+    });
 
-      // And if we need scrollbar
-      scrollbar: {
-        el: ".swiper-scrollbar",
+    // ! works swiper //////////////////////////////////////
+
+    const swiper2 = new Swiper(".swiper-works", {
+      // Optional parameters
+      direction: "horizontal",
+      loop: true,
+      effect: "cube",
+      // autoplay: {
+      //   // delay: 3000,
+      // },
+
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
       },
-    });
-  </script>
-  <script>
-    const menuBtn = document.querySelector("#menu");
-    const aside = document.querySelector("aside");
-    const closeBtn = document.querySelector(".aside-close");
-    closeBtn.addEventListener("click", () => {
-      aside.style.width = 0;
-    });
-    menuBtn.addEventListener("click", () => {
-      aside.style.width = "30%";
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     });
   </script>
 </html>

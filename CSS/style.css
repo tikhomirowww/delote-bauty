@@ -223,6 +223,7 @@ aside {
   right: 0;
   z-index: 2;
   transition: width 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .aside-close {
@@ -234,11 +235,25 @@ aside {
 .swiper {
   width: 600px;
   height: 300px;
-  display: none !important;
+  display: none;
 }
 
 .swiper-slide {
-  display: flex !important;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination-bullet {
+  color: var(--grey-color);
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background: var(--grey-color);
+}
+
+aside .nav-list {
+  display: none;
 }
